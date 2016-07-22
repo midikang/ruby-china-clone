@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  node_id: 
+  body: MyText
+  user_id: 
+  replies_count: 1
+  last_reply_user_id: 1
+  replied_at: 2016-07-22 08:17:39
+  source: MyString
+
+two:
+  title: MyString
+  node_id: 
+  body: MyText
+  user_id: 
+  replies_count: 1
+  last_reply_user_id: 1
+  replied_at: 2016-07-22 08:17:39
+  source: MyString
