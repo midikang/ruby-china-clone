@@ -76,12 +76,13 @@ ActiveRecord::Schema.define(version: 20160722081754) do
     t.string   "bio"
     t.string   "website"
     t.string   "avatar_file_name"
+    t.boolean  "verified",         default: false, null: false
     t.integer  "state"
     t.string   "qq"
     t.datetime "last_logined_at"
     t.string   "tagline"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
 end

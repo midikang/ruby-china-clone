@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :bio
       t.string :website
       t.string :avatar_file_name
+      t.boolean :verified, :null => false, :default => false
       t.integer :state
       t.string :qq
       t.datetime :last_logined_at
