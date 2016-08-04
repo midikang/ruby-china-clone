@@ -28,9 +28,8 @@
         <td><%= topic.last_reply_user_id %></td>
         <td><%= topic.replied_at %></td>
         <td><%= topic.source %></td>
-        <td><%= link_to 'Show', topic %></td>
-        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_cpanel_topic_path(topic) %></td>
+        <td><%= link_to 'Destroy', cpanel_topic_path(topic), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +37,4 @@
 
 <br>
 
-<%= link_to 'New Topic', new_topic_path %>
+<%= link_to 'New Topic', new_cpanel_topic_path %>

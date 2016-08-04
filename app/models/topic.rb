@@ -3,5 +3,5 @@ class Topic < ActiveRecord::Base
   belongs_to :node
   belongs_to :user
   has_many :replies
-  scope :recent, :order => "id desc"
+  #scope :recent, :order => "id desc"
 end
