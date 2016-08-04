@@ -1,5 +1,5 @@
 <%= form_for(@node,
-      :url => (@node.id.blank? ? cpanel_nodes_path : cpanel_nodes_path(@node.id))
+      :url => (@node.id.blank? ? cpanel_nodes_path : cpanel_node_path(@node.id))
       ) do |f| %>
   <% if @node.errors.any? %>
     <div id="error_explanation">

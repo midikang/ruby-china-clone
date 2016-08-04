@@ -28,7 +28,7 @@ class Cpanel::NodesController < Cpanel::ApplicationController
 
     respond_to do |format|
       if @node.save
-        format.html { redirect_to @node, notice: 'Node was successfully created.' }
+        format.html { redirect_to cpanel_nodes_path, notice: 'Node was successfully created.' }
         format.json { render :show, status: :created, location: @node }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Cpanel::NodesController < Cpanel::ApplicationController
   def update
     respond_to do |format|
       if @node.update(node_params)
-        format.html { redirect_to @node, notice: 'Node was successfully updated.' }
+        format.html { redirect_to cpanel_nodes_path, notice: 'Node was successfully updated.' }
         format.json { render :show, status: :ok, location: @node }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Cpanel::NodesController < Cpanel::ApplicationController
   def destroy
     @node.destroy
     respond_to do |format|
-      format.html { redirect_to nodes_url, notice: 'Node was successfully destroyed.' }
+      format.html { redirect_to cpanel_nodes_path, notice: 'Node was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
