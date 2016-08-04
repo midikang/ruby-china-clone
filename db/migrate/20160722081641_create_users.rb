@@ -1,13 +1,12 @@
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
-      t.string :email
-      t.string :passwd
-      t.string :name
+      t.string :email, :null => false
+      t.string :passwd, :null => false
+      t.string :name, :null => false
       t.string :location
       t.string :bio
       t.string :website
-      t.string :avatar_file_name
       t.boolean :verified, :null => false, :default => false
       t.integer :state
       t.string :qq

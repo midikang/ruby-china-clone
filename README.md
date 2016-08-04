@@ -51,3 +51,34 @@ end
 
 ### view
 mv app/nodes/*.erb app/cpanel/nodes
+
+
+# uninitialized constant Yaml (NameError)
+solution:
+add below code in application.rb
+```
+require 'yaml'
+```
+
+## add paperclip support
+```
+gem "paperclip", "5.0.0"
+```
+
+```
+bundle install
+```
+
+```
+rails g paperclip user avatar
+```
+
+```
+rake db:migrate
+```
+
+Psych::SyntaxError:
+
+在config/boot.rb的开始处添加
+require 'yaml'
+YAML::ENGINE.yamler= 'syck'

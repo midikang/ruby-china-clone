@@ -43,3 +43,6 @@ group :development, :test do
   gem 'spring'
 end
 
+gem "paperclip", "5.0.0"
+
+#gem 'psych', '~> 2.1'

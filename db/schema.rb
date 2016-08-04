@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722081754) do
+ActiveRecord::Schema.define(version: 20160726084908) do
 
   create_table "counters", force: :cascade do |t|
     t.string   "key"
@@ -69,20 +69,23 @@ ActiveRecord::Schema.define(version: 20160722081754) do
   add_index "topics", ["user_id"], name: "index_topics_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.string   "email"
-    t.string   "passwd"
-    t.string   "name"
+    t.string   "email",                               null: false
+    t.string   "passwd",                              null: false
+    t.string   "name",                                null: false
     t.string   "location"
     t.string   "bio"
     t.string   "website"
-    t.string   "avatar_file_name"
-    t.boolean  "verified",         default: false, null: false
+    t.boolean  "verified",            default: false, null: false
     t.integer  "state"
     t.string   "qq"
     t.datetime "last_logined_at"
     t.string   "tagline"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
 end
