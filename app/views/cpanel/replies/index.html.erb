@@ -22,9 +22,8 @@
         <td><%= reply.user %></td>
         <td><%= reply.state %></td>
         <td><%= reply.source %></td>
-        <td><%= link_to 'Show', reply %></td>
         <td><%= link_to 'Edit', edit_reply_path(reply) %></td>
-        <td><%= link_to 'Destroy', reply, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', cpanel_reply_path(reply), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Reply', new_reply_path %>
+<%= link_to 'New Reply', new_cpanel_reply_path %>

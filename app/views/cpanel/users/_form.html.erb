@@ -15,7 +15,7 @@
 
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :class => "middle" %>
   </div>
   <div class="field">
     <%= f.label :passwd %><br>
@@ -31,7 +31,7 @@
   </div>
   <div class="field">
     <%= f.label :bio %><br>
-    <%= f.text_field :bio %>
+    <%= f.text_area :bio, :class => "middle", :style => "height:60px;" %>
   </div>
   <div class="field">
     <%= f.label :website %><br>
@@ -50,7 +50,7 @@
 
   <div class="field">
     <%= f.label :verified %><br>
-    <%= f.check_box :verified %>
+    <%= f.check_box :verified, :class => "checkbox" %>
   </div>
   <div class="field">
     <%= f.label :state %><br>
@@ -66,7 +66,7 @@
   </div>
   <div class="field">
     <%= f.label :tagline %><br>
-    <%= f.text_field :tagline %>
+    <%= f.text_field :tagline, :class => "middle" %>
   </div>
   <div class="actions">
     <%= f.submit %>
