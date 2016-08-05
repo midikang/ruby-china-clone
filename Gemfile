@@ -46,3 +46,6 @@ end
 gem "paperclip", "5.0.0"
 
 #gem 'psych', '~> 2.1'
+
+#gem "authlogic", "2.1.6"
+gem "authlogic", :git => "http://github.com/binarylogic/authlogic.git"

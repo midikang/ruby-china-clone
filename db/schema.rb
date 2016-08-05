@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726084908) do
+ActiveRecord::Schema.define(version: 20160805063450) do
 
   create_table "counters", force: :cascade do |t|
     t.string   "key"
@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(version: 20160726084908) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                               null: false
-    t.string   "passwd",                              null: false
     t.string   "name",                                null: false
     t.string   "location"
     t.string   "bio"
@@ -78,7 +77,6 @@ ActiveRecord::Schema.define(version: 20160726084908) do
     t.boolean  "verified",            default: false, null: false
     t.integer  "state"
     t.string   "qq"
-    t.datetime "last_logined_at"
     t.string   "tagline"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
@@ -86,6 +84,16 @@ ActiveRecord::Schema.define(version: 20160726084908) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.string   "single_access_token"
+    t.string   "perishable_toke"
+    t.integer  "login_count"
+    t.integer  "failed_login_count"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
   end
 
 end

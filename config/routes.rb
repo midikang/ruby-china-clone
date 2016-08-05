@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
 
+  # get 'user_sessions/new'
+  # get 'user_sessions/create'
+  # get 'user_sessions/destroy'
+
   root :to=> "home#index"
+
+  resources :user_sessions do
+    collection do
+      get "destroy"
+    end
+  end
+
   namespace :cpanel do
     #root :controller => :home, :action => :index
     root :to=> "home#index"

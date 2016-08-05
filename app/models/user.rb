@@ -19,4 +19,7 @@ class User < ActiveRecord::Base
     :normal => 1,
     :blocked => 2
     }
+
+  act_as_authentic do |c|
+  end
 end
