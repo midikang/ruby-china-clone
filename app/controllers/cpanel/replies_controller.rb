@@ -28,7 +28,7 @@ class Cpanel::RepliesController < Cpanel::ApplicationController
 
     respond_to do |format|
       if @reply.save
-        format.html { redirect_to @reply, notice: 'Reply was successfully created.' }
+        format.html { redirect_to cpanel_replies_path, notice: 'Reply was successfully created.' }
         format.json { render :show, status: :created, location: @reply }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Cpanel::RepliesController < Cpanel::ApplicationController
   def update
     respond_to do |format|
       if @reply.update(reply_params)
-        format.html { redirect_to @reply, notice: 'Reply was successfully updated.' }
+        format.html { redirect_to cpanel_replies_path, notice: 'Reply was successfully updated.' }
         format.json { render :show, status: :ok, location: @reply }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Cpanel::RepliesController < Cpanel::ApplicationController
   def destroy
     @reply.destroy
     respond_to do |format|
-      format.html { redirect_to replies_url, notice: 'Reply was successfully destroyed.' }
+      format.html { redirect_to cpanel_replies_path, notice: 'Reply was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
